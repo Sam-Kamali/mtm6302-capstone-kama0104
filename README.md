@@ -2,4 +2,4 @@
 
 Name: Sam Kamali
 Student Number: 041054549
-Project: "Quiz Site"
+Project: "Astronomy Picture of the Day Search"
