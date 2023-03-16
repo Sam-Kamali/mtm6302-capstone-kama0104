@@ -26,7 +26,7 @@ body {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
-
+/* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
 
@@ -46,7 +46,9 @@ section {
 .box {
     padding: 1%;
 }
+/* ----------------------------------------------- */
 /* ----- HEADINGS ----- */
+/* ----------------------------------------------- */
 h1,
 h2,
 h3 {
@@ -124,8 +126,9 @@ header {
     float: left;
     margin-top: 20px;
 }
-
+/* ----------------------------------------------- */
 /* Main navi */
+/* ----------------------------------------------- */
 .main-nav {
     float: right;
     list-style: none;
@@ -155,7 +158,9 @@ header {
 }
 
 
+/* ----------------------------------------------- */
 /* Mobile navi */
+/* ----------------------------------------------- */
 .mobile-nav-icon {
     float: right;
     margin-top: 30px;
@@ -168,8 +173,9 @@ header {
     color: #fff;
 }
 
-
+/* ----------------------------------------------- */
 /* Sticky navi */
+/* ----------------------------------------------- */
 .sticky {
     position: fixed;
     top: 0;
@@ -191,8 +197,9 @@ header {
 .sticky .logo { display: none; }
 .sticky .logo-black { display: block; }
 
+/* ----------------------------------------------- */
 /* ----- LINKS ----- */
-
+/* ----------------------------------------------- */
 a:link,
 a:visited {
     color: var(--prime);
@@ -209,7 +216,9 @@ a:active {
     border-bottom: 1px solid transparent;
 }
 
+/* ----------------------------------------------- */
 /* ----- BUTTONS ----- */
+/* ----------------------------------------------- */
 .btn:link,
 .btn:visited,
 input[type=submit] {
@@ -255,8 +264,9 @@ input[type=submit]:active {
     color: #fff;
 }
 
+/* ----------------------------------------------- */
 /* CAROUSEL */
-
+/* ----------------------------------------------- */
 .c-item {
     height: 480px;
   }
@@ -301,7 +311,9 @@ input[type=submit]:active {
     margin-bottom: 1em;
 }
 
+/* ----------------------------------------------- */
 /* -----RELATED TAGS --------*/
+/* ----------------------------------------------- */
 .related-tags {
     margin-top: 2.5em;
 }
@@ -314,6 +326,100 @@ input[type=submit]:active {
     margin-top: 1em;
 }
 
-.related-photo{
-    margin-top: -10em
+.related-photo {
+    display: flex;
+    margin-top: -10em;
+    text-align: center;
+}
+.related-photo img{
+    text-align: center;
+    width:350px;
+    border-radius: 50%;
+    margin: 1em auto;
+}
+
+
+
+
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+    background-color: #dbdbdb;
+    padding: 0.1em;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    margin-top: 3.5em;
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #777777;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: var(--qua);
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.fa-facebook,
+.ion-social-twitter,
+.fa-twitter,
+.fa-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.fa-facebook:hover {
+    color: #3b5998;
+}
+
+.fa-twitter:hover {
+    color: #00aced;
+}
+
+.fa-instagram:hover {
+    color: #dd39cd;
+}
+
+footer p {
+    color: #888;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 2em;
+}
+footer img {
+    width: 8em;
 }
