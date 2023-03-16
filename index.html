@@ -15,31 +15,43 @@
     <script src="script.js"></script>
      
 </head>
-
-
+ 
 <body>
     <header>
-        <nav  class="container">
-            <div class="line">
-                <img src="/pics/nasa-logo-web-rgb.png" alt="nasa logo" class="logo">
-                <ul class="main-nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#browse">Browse API</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-                <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
+        <nav class="container">
+            <div class="row">
+                <div class="line">
+                    <img src="/pics/nasa-logo-web-rgb.png" alt="nasa logo" class="logo">
+                    <ul class="main-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#browse">Browse API</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
             </div>
         </nav>
-        <div class="hero-text-box">
-            <h1>Short statement<br></h1>
-            <p>The objective of this site is to make NASA data, including imagery, eminently accessible to
-                application developers. This catalog focuses on broadly useful and user friendly APIs and
-                does not hold every NASA API.</p>
-            <a class="btn btn-full" href="#">Get Started</a>
-            <a class="btn btn-ghost" href="#">Browse API</a>
-        </div>
+        <section class="container">
+                <h1>Short statement<br></h1>
+                <p>The objective of this site is to make NASA data, including imagery, eminently accessible to
+                    application developers. This catalog focuses on broadly useful and user friendly APIs and
+                    does not hold every NASA API.</p>
+                <a class="btn btn-full" href="#">Get Started</a>
+                <a class="btn btn-ghost" href="#">Browse API</a>
+            </div>
+        </section>
     </header>
+
+    <!-- SELECT A DATE -->
+<section class="select-date">
+    <div class = "container">
+        <div class = "row">
+            <h1>Select a date</h1>
+            <input type="date">
+        </div>
+    </div>
+</section>
     
     <!-- CAROUSEL -->
 
@@ -134,7 +146,7 @@
   </section>
 
   <!-- RELATED PHOTOS -->
-  <section class="related-photo">
+  <section class="related-photo" id="gallery">
     <div class = "container">
         <div class = "row">
             <h1>Related photos</h1>
