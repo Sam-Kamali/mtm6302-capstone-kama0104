@@ -271,8 +271,6 @@ input[type='date'] ::-webkit-calendar-picker-indicator{
     color:var(--qua);
     font-size: 120%;
     margin-right: 10px;
-    
-    /*secrets to align text and icons*/
     line-height: 120%;
     vertical-align: middle;
     margin-top: -5px;
