@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASA</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    
+    <title>TEST RUN</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="script.js"></script>
-     
 </head>
- 
 <body>
-    <header>
+
+<!-- NAV BAR + HEADER -->
+<header>
         <nav class="container">
             <div class="row">
                 <div class="line">
@@ -30,7 +27,7 @@
                 </div>
             </div>
         </nav>
-        <section class="container">
+        <section class="container head">
                 <h1>Short statement<br></h1>
                 <p>The objective of this site is to make NASA data, including imagery, eminently accessible to
                     application developers. This catalog focuses on broadly useful and user friendly APIs and
@@ -39,161 +36,77 @@
                 <a class="btn btn-ghost" href="#">Browse API</a>
             </div>
         </section>
-    </header>
+</header>
 
-    <!-- SELECT A DATE -->
-<section class="select-date">
-    <div class = "container">
-        <div class = "row">
-            <h1>Select a date</h1>
-            <input type="date">
+<section class="underheader">
+
+<!-- RELATED PHOTOS -->
+
+    <section class="related-photo" id="gallery">
+        <div class = "container">
+            <div class = "row">
+                <h1>Related photos</h1>
+                <img src="/pics/8.jpg"  alt="pic">
+                <img src="/pics/10.png"  alt="pic">
+                <img src="/pics/13.png"  alt="pic">
+                <img src="/pics/14.png"  alt="pic">
+                <img src="/pics/15.png"  alt="pic">
+                <img src="/pics/16.png"  alt="pic">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
     
-    <!-- CAROUSEL -->
-
-  <section>
-      <div class = "container">
-          <div class = "row">
-              <h1>Short Description</h1>
-              <p class="long-copy">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            <div id="hero-carousel" class="carousel slide"  data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-          
-                <div class="carousel-inner">
-                    <div class="carousel-item active c-item">
-                        <img src="/pics/8.jpg" class="d-block w-100 c-img" alt="Slide 1">
-                        <div class="carousel-caption top-0 mt-4"></div>
-                    </div>
-                    <div class="carousel-item c-item">
-                        <img src="/pics/9.jpg" class="d-block w-100 c-img" alt="Slide 2">
-                        <div class="carousel-caption top-0 mt-4"></div>
-                    </div>
-                    <div class="carousel-item c-item">
-                        <img src="/pics/12.jpg" class="d-block w-100 c-img" alt="Slide 3">
-                        <div class="carousel-caption top-0 mt-4"></div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-              
-            <!-- ICONS UNDER THE CAROUSEL -->
-              <div class="row">
-                    <div class="col span-1-of-4 box carousel-icons">
-                       <a href="#"> <img src="/pics/1.png" class="icons" alt="icons 1"></a>
-                    </div>
-                    <div class="col span-1-of-4 box">
-                        <img src="/pics/2.png" class="icons" alt="icons 2">
-                    </div>
-                    <div class="col span-1-of-4 box">
-                        <img src="/pics/3.png" class="icons" alt="icons 3">
-                    </div>
-              </div>
-          </div>
-      </div>
-        <!-- ICONS NEXT TO THE TEXT UNDER CAROUSEL -->
-        <section class="section-decription" id="cities">
-          <div class = "container">       
-                <div class="row ">
-                    <div class="col span-1-of-4 box">
-                          <div class="pic-feature">
-                            <img src="/pics/4.png" alt="location-icon">
-                              Newton, MAv
-                          </div>
-                          <div class="pic-feature">
-                            <img src="/pics/5.png" alt="location-icon">
-                              Published on March 10, 2021
-                          </div>
-                          <div class="pic-feature">
-                            <img src="/pics/6.png" alt="location-icon">
-                            ZWO w/WOGT71 30 frames, ASI533 MC pro
-                          </div>
-                          <div class="pic-feature">
-                            <img src="/pics/7.png" alt="location-icon">
-                            Details:
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                          </div> 
-
-                          <div class="related-tags">
-                            Related Tags <br>
-                            <a href="#"><p>#space</p></a>
-                            <a href="#"><p>#NASA</p></a>
-                            <a href="#"><p>#API</p></a>
-                          </div>
-                    </div>
-                </div>
-          </div>
-        </section>
-  </section>
-
-  <!-- RELATED PHOTOS -->
-  <section class="related-photo" id="gallery">
-    <div class = "container">
-        <div class = "row">
-            <h1>Related photos</h1>
-            <img src="/pics/8.jpg"  alt="pic">
-            <img src="/pics/10.png"  alt="pic">
-            <img src="/pics/13.png"  alt="pic">
-            <img src="/pics/14.png"  alt="pic">
-            <img src="/pics/15.png"  alt="pic">
-            <img src="/pics/16.png"  alt="pic">
-        </div>
+<!-- SELECT A DATE -->
+    
+    <div class="container select">
+        <h1>Select a date</h1>
+        <form>
+            <!-- <label for="date">Enter date:</label> -->
+            <input type="date" id="date" name="date">
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <div id="image-container"></div>
+        <button type="button" id="save"><i class="fa-sharp fa-solid fa-heart"></i>Save as Favorite</button>
+        <div id="favorites-container"></div>  
     </div>
-  </section>
-  
-<!-- FOOTER -->
-  <footer>
-    <div class="container">
-            <div class="row">
-                <div class="col span-1-of-2">
-                    <img src="/pics/nasa-logo-web-rgb.png" alt="nasa">
-                    <ul class="footer-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Browse API</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col span-1-of-2">
-                    <ul class="social-links">
-                        <li><a href="#"><i class="fa fa-facebook"></i></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <p>
-                    Office of the Chief Information Officer <br>
-                    nasa-data@lists.arc.nasa.gov
-                </p>
-            </div>
-    </div>
-</footer>
 
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e208911edf.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
-<footer>
 
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col span-1-of-2">
+                <img src="/pics/nasa-logo-web-rgb.png" alt="nasa">
+                <ul class="footer-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Browse API</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <li><a href="#"><i class="fa fa-facebook"></i></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                Office of the Chief Information Officer <br>
+                nasa-data@lists.arc.nasa.gov
+            </p>
+        </div>
+</div>
 </footer>
+
 
 
 </html>

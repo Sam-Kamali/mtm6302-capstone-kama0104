@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -28,8 +27,10 @@ body {
 }
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
-/* ----------------------------------------------- */
 
+.head h1{
+    color: #fff;
+}
 
 .row {
     max-width: 1140px;
@@ -43,12 +44,7 @@ section {
     padding: 80px 0;
 }
 
-/* .box {
-    padding: 1%;
-} */
-/* ----------------------------------------------- */
 /* ----- HEADINGS ----- */
-/* ----------------------------------------------- */
 h1,
 h2,
 h3 {
@@ -96,11 +92,10 @@ p {
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
-
-/* ----------------------------------------------- */
-/* HEADER */
-/* ----------------------------------------------- */
-
+.underheader{
+    background-color: #04060c;
+}
+/* -------- HEADER */
 header {
     
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/pics/11.jpg);
@@ -116,9 +111,9 @@ header {
     float: left;
     margin-top: 20px;
 }
-/* ----------------------------------------------- */
-/* Main navi */
-/* ----------------------------------------------- */
+
+/* -------- Main navi */
+
 .main-nav {
     float: right;
     list-style: none;
@@ -148,9 +143,8 @@ header {
 }
 
 
-/* ----------------------------------------------- */
 /* ----- LINKS ----- */
-/* ----------------------------------------------- */
+
 a:link,
 a:visited {
     color: var(--prime);
@@ -167,9 +161,8 @@ a:active {
     border-bottom: 1px solid transparent;
 }
 
-/* ----------------------------------------------- */
 /* ----- BUTTONS ----- */
-/* ----------------------------------------------- */
+
 .btn:link,
 .btn:visited,
 input[type=submit] {
@@ -215,94 +208,130 @@ input[type=submit]:active {
     color: #fff;
 }
 
-/* ----------------------------------------------- */
-/* SELECT A DATE*/
-/* ----------------------------------------------- */
 
-.select-date {
-    background-image: linear-gradient( rgb(3, 8, 18), #CBEA39);
+
+
+
+/* ----- SELECT A DATE */
+.container select {
+    background-color: #101835;
+}
+.select h1 {
+    margin-bottom: 30px;
     text-align: center;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 input[type='date'] {
     width: 20em;
-    height: 7em;
+    height: 2em;
     padding-left: 3rem;
     background-color: black;
     color: white;
     border-color: var(--sec);
     border-radius: 4em;
-    margin: auto;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
 }
-input[type='date'] ::-webkit-calendar-picker-indicator{
-    opacity:0;
-}
-
-
-/* ----------------------------------------------- */
-/* CAROUSEL */
-/* ----------------------------------------------- */
-.c-item {
-    height: 480px;
-  }
-  
-  .c-img {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-  }
-
-.carousel-icons {
-    margin-left: 170px;
-  }
-.icons {
-    display: inline-block;
-    width: 50px;
+button[type='submit'] {
+    width: 6em;
+    height: 2em;
+    color: rgb(0, 0, 0);
+    border-color: var(--qua);
+    border-radius: 4em;
+    font-size: 1.2em;
     text-align: center;
-    font-size: 120%;
 }
-
-
-.icon-small {
-    display: inline-block;
-    width: 30px;
+button[type='submit']:hover {
+    width: 6em;
+    height: 2em;
+    background-color: var(--prime);
+    color: rgb(255, 255, 255);
+    border-color: white;
+    border-radius: 4em;
+    font-size: 1.2em;
     text-align: center;
-    color:var(--qua);
-    font-size: 120%;
-    margin-right: 10px;
-    line-height: 120%;
-    vertical-align: middle;
-    margin-top: -5px;
 }
 
-.section-decription img {
-    width: 30px;
+
+#submit {
+    margin-left: 10px;
 }
 
-.pic-feature{
-    color: white;
-    margin-bottom: 1em;
+#image-container {
+    margin-bottom: 2px;
 }
 
-/* ----------------------------------------------- */
+.image-style {
+    border: 1px solid;
+    border-radius: 50px;
+    width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+.h1-style{
+    color: #d6ccff;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5em;
+}
+.p-style{
+    color: #ffffff;
+    margin-bottom: 0.5em;
+    display: block;
+    margin: 0 auto;
+    
+}
+#save {
+    display: none;
+    border-radius: 50px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    background-color: #3000a0;
+    color: #fff;
+    margin-bottom: 3em;
+}
+#save:hover {
+    display: none;
+    border-radius: 50px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    background-color: #6d0841;
+    color: #fff;
+    margin-bottom: 3em;
+}
+
+#favorites-container {
+    display: none;
+    border: 1px solid;
+    border-radius: 50px;
+    width: 45em;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
 /* -----RELATED TAGS --------*/
-/* ----------------------------------------------- */
-.related-tags {
-    margin-top: 2.5em;
-}
-.related-tags p{
-    background-color: rgb(235, 243, 249);
-    border-radius: 10em;
-    padding: 10px 30px;
-    color: #555;
-    display: inline-block;
-    margin-top: 1em;
-}
 
 .related-photo {
+    border-radius: 10em;
+    padding: 10px 30px;
+    color: #ffffff;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 5em;
     display: flex;
-    margin-top: -10em;
     text-align: center;
 }
 .related-photo img{
@@ -313,9 +342,14 @@ input[type='date'] ::-webkit-calendar-picker-indicator{
 }
 
 
-/* ----------------------------------------------- */
+
+
+
+
+
+
 /* FOOTER */
-/* ----------------------------------------------- */
+
 
 footer {
     background-color: #dbdbdb;
@@ -387,3 +421,5 @@ footer p {
 footer img {
     width: 8em;
 }
+
+
