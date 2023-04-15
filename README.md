@@ -32,3 +32,14 @@ using customized icons for the location,calendar,camera and detail icon.
 Using font awesome for the fb, twitter and instagram icon.
 
 using input type=date to put as a select a date and using webkit to make it responsive. Not sure how to make it look like the one designed as the original UI.
+
+part-4
+
+signed up in the API NASA website and got a specific key.
+using that, I could fetch image data for selected date and display it on the website.
+
+By using fetch() requesting the api for the image data and using the response.json to convert the data to js object to be able to display on the site.
+
+Once the images were fetched they were in different sizes, so i gave them classes to style them in css.
+
+Using different functions, I saved the images in local storage to favorite and it displays even after refreshing

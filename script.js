@@ -4,11 +4,13 @@ const saveButton = document.querySelector('#save');
 const favoritesContainer = document.querySelector('#favorites-container');
 const apiKey = "9c9fS2zjTYrBRH4LGZkWdjm32cXXZR29f7L2ix61";
 
-// Fetch image data for selected date and display it
+// Fetching image data for selected date and displaying it
 function fetchImageData(event) {
     event.preventDefault();
     const date = document.querySelector('#date').value;
     const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
+
+// requesting the api for the image data and using the response.json converting to js object    
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -22,14 +24,14 @@ function fetchImageData(event) {
         .catch(error => console.error(error));
 }
 
-// Save the current image as a favorite
+// Saving the current image as a favorite
 function saveImage() {
     const image = imageContainer.innerHTML;
     const page = window.location.pathname;
     const key = `favoriteImage_${page}`;
-    let favorites = JSON.parse(localStorage.getItem(key)) || []; // retrieve existing favorites or initialize an empty array
-    favorites.push(image); // add the new image to the favorites array
-    localStorage.setItem(key, JSON.stringify(favorites)); // save the updated favorites array
+    let favorites = JSON.parse(localStorage.getItem(key)) || []; //retrieves existing favorites 
+    favorites.push(image); // adds the new image to the favorites array
+    localStorage.setItem(key, JSON.stringify(favorites)); // saves the updated favorites array
     favoritesContainer.innerHTML = ''; // clear the existing favorites list
     favorites.forEach(favorite => {
       const favoriteImage = document.createElement('div');
@@ -57,22 +59,9 @@ function displayFavoriteImage() {
   }
 }
 
-  
-
 // add an event listener to the window object to display the favorite image on page load
 window.addEventListener('load', displayFavoriteImage);
-
-
 form.addEventListener('submit', fetchImageData);
 saveButton.addEventListener('click', saveImage);
 
-
-
-// adding a class to the image container element to be able to style it
-
-imageContainer.innerHTML = `
-  <img src="${data.url}" alt="${data.title}" class="image-container">
-  <h2>${data.title}</h2>
-  <p>${data.explanation}</p>
-`;
 
