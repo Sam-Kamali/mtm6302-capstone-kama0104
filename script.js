@@ -37,23 +37,23 @@ function fetchImageData(event) {
 }
 
 
-// Saving the current image as a favorite
+// Saving the current image as a fav
 function saveImage() {
   const image = imageContainer.innerHTML;
   const page = window.location.pathname;
   const key = `favoriteImage_${page}`;
   let favorites = JSON.parse(localStorage.getItem(key)) || [];
   
-  // Create a container element for the image and the remove button
+  // Creating a container for the image and the remove button
   const favoriteImageContainer = document.createElement('div');
   favoriteImageContainer.classList.add('favorite-image-container');
 
-  // Create the remove button
+  // remove button
   const removeButton = document.createElement('button');
   removeButton.classList.add('remove-button');
   removeButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
-  // Add an event listener to the remove button to remove the favorite image
+  // event listener 4 the remove button
   removeButton.addEventListener('click', function() {
     const index = favorites.indexOf(image);
     if (index > -1) {
@@ -63,26 +63,25 @@ function saveImage() {
     favoriteImageContainer.remove();
   });
 
-  // Create the image element
+  // image element
   const favoriteImage = document.createElement('div');
   favoriteImage.innerHTML = image;
   favoriteImage.classList.add('favorite-image');
 
-  // Append the remove button and the image to the container
+  // remove button and the image to the container
   favoriteImageContainer.appendChild(removeButton);
   favoriteImageContainer.appendChild(favoriteImage);
 
-  // Append the container to the favorites container
+  // Append container to the favorites container
   favoritesContainer.appendChild(favoriteImageContainer);
 
-  // Add the new image to the favorites array
+  // new image to the favorites array
   favorites.push(image);
   localStorage.setItem(key, JSON.stringify(favorites));
 
-  // Clear the image container
   imageContainer.innerHTML = '';
   
-  // Display the favorites container
+  // Display favorites container
   favoritesContainer.style.display = 'block';
 }
 
@@ -95,6 +94,7 @@ function displayFavoriteImage() {
   const page = window.location.pathname;
   const key = `favoriteImage_${page}`;
   const favoriteImages = JSON.parse(localStorage.getItem(key)) || [];
+
 
 
   // Loop through each saved image and add it to the favorites container
