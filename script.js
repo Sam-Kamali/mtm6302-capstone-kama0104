@@ -39,21 +39,53 @@ function fetchImageData(event) {
 
 // Saving the current image as a favorite
 function saveImage() {
-    const image = imageContainer.innerHTML;
-    const page = window.location.pathname;
-    const key = `favoriteImage_${page}`;
-    let favorites = JSON.parse(localStorage.getItem(key)) || []; //retrieves existing favorites 
-    favorites.push(image); // adds the new image to the favorites array
-    localStorage.setItem(key, JSON.stringify(favorites)); // saves the updated favorites array
-    favoritesContainer.innerHTML = ''; 
-    favorites.forEach(favorite => {
-      const favoriteImage = document.createElement('div');
-      favoriteImage.innerHTML = favorite;
-      favoriteImage.classList.add('favorite-image'); // Adding a class to the favorite image element
-      favoritesContainer.appendChild(favoriteImage);
-    });
-    favoritesContainer.style.display = 'block';
-  }
+  const image = imageContainer.innerHTML;
+  const page = window.location.pathname;
+  const key = `favoriteImage_${page}`;
+  let favorites = JSON.parse(localStorage.getItem(key)) || [];
+  
+  // Create a container element for the image and the remove button
+  const favoriteImageContainer = document.createElement('div');
+  favoriteImageContainer.classList.add('favorite-image-container');
+
+  // Create the remove button
+  const removeButton = document.createElement('button');
+  removeButton.classList.add('remove-button');
+  removeButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
+  // Add an event listener to the remove button to remove the favorite image
+  removeButton.addEventListener('click', function() {
+    const index = favorites.indexOf(image);
+    if (index > -1) {
+      favorites.splice(index, 1);
+    }
+    localStorage.setItem(key, JSON.stringify(favorites));
+    favoriteImageContainer.remove();
+  });
+
+  // Create the image element
+  const favoriteImage = document.createElement('div');
+  favoriteImage.innerHTML = image;
+  favoriteImage.classList.add('favorite-image');
+
+  // Append the remove button and the image to the container
+  favoriteImageContainer.appendChild(removeButton);
+  favoriteImageContainer.appendChild(favoriteImage);
+
+  // Append the container to the favorites container
+  favoritesContainer.appendChild(favoriteImageContainer);
+
+  // Add the new image to the favorites array
+  favorites.push(image);
+  localStorage.setItem(key, JSON.stringify(favorites));
+
+  // Clear the image container
+  imageContainer.innerHTML = '';
+  
+  // Display the favorites container
+  favoritesContainer.style.display = 'block';
+}
+
   
 
 
@@ -63,18 +95,49 @@ function displayFavoriteImage() {
   const page = window.location.pathname;
   const key = `favoriteImage_${page}`;
   const favoriteImages = JSON.parse(localStorage.getItem(key)) || [];
+
+
+  // Loop through each saved image and add it to the favorites container
+  favoriteImages.forEach(favorite => {
+    const favoriteImageContainer = document.createElement('div');
+    favoriteImageContainer.classList.add('favorite-image-container');
+
+    // Create the remove button
+    const removeButton = document.createElement('button');
+    removeButton.classList.add('remove-button');
+    removeButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
+    // Add an event listener to the remove button to remove the favorite image
+    removeButton.addEventListener('click', function() {
+      const index = favoriteImages.indexOf(favorite);
+      if (index > -1) {
+        favoriteImages.splice(index, 1);
+      }
+      localStorage.setItem(key, JSON.stringify(favoriteImages));
+      favoriteImageContainer.remove();
+    });
+
+    // Create the image element
+    const favoriteImage = document.createElement('div');
+    favoriteImage.innerHTML = favorite;
+    favoriteImage.classList.add('favorite-image');
+
+    // Append the remove button and the image to the container
+    favoriteImageContainer.appendChild(removeButton);
+    favoriteImageContainer.appendChild(favoriteImage);
+
+    // Append the container to the favorites container
+    favoritesContainer.appendChild(favoriteImageContainer);
+  });
+
+  // Display the favorites container if there are saved images
   if (favoriteImages.length > 0) {
-    const favoriteImage = favoriteImages[favoriteImages.length - 1];
-    const imageElement = document.createElement('div');
-    imageElement.innerHTML = favoriteImage;
-    const img = imageElement.querySelector('img'); 
-    if (img) {
-      favoritesContainer.appendChild(img); 
-      favoritesContainer.style.display = 'block';
-    }
-    saveButton.style.display = 'none';
+    favoritesContainer.style.display = 'block';
+  } else {
+    favoritesContainer.style.display = 'none';
   }
 }
+
 
 // add an event listener to the window object to display the favorite image on page load
 window.addEventListener('load', displayFavoriteImage);

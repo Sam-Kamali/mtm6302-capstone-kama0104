@@ -21,17 +21,15 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#browse">Browse API</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#footer">Contact Us</a></li>
                     </ul>
                     <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
                 </div>
             </div>
         </nav>
         <section class="container head">
-                <h1>Short statement<br></h1>
-                <p>The objective of this site is to make NASA data, including imagery, eminently accessible to
-                    application developers. This catalog focuses on broadly useful and user friendly APIs and
-                    does not hold every NASA API.</p>
+                <h1>Welcome<br></h1>
+                <p>The objective of this site is to show you the Astronomy Picture of the Day based on the date you choose.</p>
                 <a class="btn btn-full" href="#">Get Started</a>
                 <a class="btn btn-ghost" href="#">Browse API</a>
             </div>
@@ -42,7 +40,7 @@
     
 <!-- SELECT A DATE -->
     
-    <div class="container select">
+    <div id="browse" class="container select">
         <h1>Select a date</h1>
         <form>
             <!-- <label for="date">Enter date:</label> -->
@@ -51,7 +49,7 @@
         </form>
         <div id="image-container"></div>
         <button type="button" id="save"><i class="fa-sharp fa-solid fa-heart"></i>Save as Favorite</button>
-        <button type="button" id="remove"><i class="fa-solid fa-trash-can"></i>Remove as Favorite</button>
+        <!-- <button type="button" id="remove"><i class="fa-solid fa-trash-can"></i>Remove as Favorite</button> -->
         <h1>Favorites</h1>
         <div id="favorites-container"></div>  
     </div>
@@ -62,7 +60,7 @@
 
 
     <!-- RELATED PHOTOS -->
-<div class = "container">
+<div id="gallery" class = "container">
     <section class="related-photo" id="gallery">
             <div class = "row">
                 <h1>Related photos</h1>
@@ -81,7 +79,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <div class="container">
+    <div id="footer" class="container">
         <div class="row">
             <div class="col span-1-of-2">
                 <img src="/pics/nasa-logo-web-rgb.png" alt="nasa">
