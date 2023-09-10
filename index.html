@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API NASA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- NAV BAR + HEADER -->
+<header>
+        <nav class="container">
+            <div class="row">
+                <div class="line">
+                    <img src="/pics/nasa-logo-web-rgb.png" alt="nasa logo" class="logo">
+                    <ul class="main-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#browse">Browse API</a></li>
+                        <li><a href="#footer">Contact Us</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </div>
+        </nav>
+        <section class="container head">
+                <h1>Welcome<br></h1>
+                <p>The objective of this site is to show you the Astronomy Picture of the Day based on the date you choose.</p>
+                <a class="btn btn-full" href="#">Get Started</a>
+                <a class="btn btn-ghost" href="#">Browse API</a>
+            </div>
+        </section>
+</header>
+
+<section class="underheader">
+    
+<!-- SELECT A DATE -->
+    
+    <div id="browse" class="container select">
+        <h1>Select a date</h1>
+        <form>
+            <!-- <label for="date">Enter date:</label> -->
+            <input type="date" id="date" name="date">
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <div id="image-container"></div>
+        <button type="button" id="save"><i class="fa-sharp fa-solid fa-heart"></i>Save as Favorite</button>
+        <!-- <button type="button" id="remove"><i class="fa-solid fa-trash-can"></i>Remove as Favorite</button> -->
+        <h1>Favorites</h1>
+        <div id="favorites-container"></div>  
+    </div>
+
+
+    <!-- RELATED PHOTOS -->
+<div id="gallery" class = "container">
+    <section class="related-photo" id="gallery">
+            <div class = "row">
+                <h1>Related photos</h1>
+                <img src="/pics/8.jpg"  alt="pic">
+                <img src="/pics/10.png"  alt="pic">
+                <img src="/pics/13.png"  alt="pic">
+                <img src="/pics/14.png"  alt="pic">
+                <img src="/pics/15.png"  alt="pic">
+                <img src="/pics/16.png"  alt="pic">
+            </div>
+        
+    </section>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div id="footer" class="container">
+        <div class="row">
+            <div class="col span-1-of-2">
+                <img src="/pics/nasa-logo-web-rgb.png" alt="nasa">
+                <ul class="footer-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Browse API</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <li><a href="#"><i class="fa fa-facebook"></i></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                Office of the Chief Information Officer <br>
+                nasa-data@lists.arc.nasa.gov
+            </p>
+        </div>
+</div>
+</footer>
+
+<script src="https://kit.fontawesome.com/e208911edf.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
